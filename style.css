@@ -1,0 +1,118 @@
+body{
+    background-color: pink;
+}
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav{
+    display: flex;
+    color:white;
+    font-size: xx-large;
+    position: relative;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    justify-content: center;
+    height:10vh;
+    width:100%;
+    background-color: black;
+}
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    flex-wrap: wrap;
+
+}
+.container{
+    position: relative;
+    top:10px;
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3,10vw);
+    
+    
+}
+.box{
+    font-family: "Montserrat", sans-serif;
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vw;
+    width: 10vw;
+    /* border: 2px solid black; */
+}
+.box:hover{
+    background-color: rgb(247, 233, 244);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.gameinfo{
+    padding-left:110px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.gif{
+    display:none;
+    transition: width 1s ease-in-out;
+}
+.bl-0{
+    border-left: 4px solid black;
+}
+.bt-0{
+    border-top: 4px solid black;
+}
+.bb-0{
+    border-bottom: 4px solid black;
+}
+.br-0{
+    border-right: 4px solid black;
+}
+
+#reset{
+    display: block;
+    margin:12px;
+    padding: 12px;
+    width:110px;
+    border-radius: 10px;
+    background-color: yellowgreen;
+    font-size: larger;
+}
+.turnfor{
+    display: block;
+    font-size: larger;
+    margin:12px;
+    font-family: "Montserrat", sans-serif;;
+}
+@media screen and (max-width: 800px) {
+    .gameinfo {
+        margin-top: 34px;
+        padding-left: 0; /* Cleaned up */
+    }
+
+    .txt {
+        font-size: 1.5rem; /* Removed space */
+    }
+
+    .container {
+        /* display: grid; Ensure grid layout is applied */
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        /* justify-content: center; Center horizontally */
+        /* align-items: center; Center vertically */
+        
+         /* Optional: Adds gap between items */
+    }
+    .box{
+        width: 20vw; 
+        height:20vw;
+    }
+}
